@@ -18,6 +18,7 @@ def read_txt(path_to_txt: str) -> Optional[str]:
             text = f.read()
     except FileNotFoundError:
         text = None
+        print("Error: File not found")
     finally:
         return text
     
@@ -38,6 +39,7 @@ def save_txt(path_to_save: str, text: str) -> bool:
         with open(path_to_save, 'w', encoding='utf-8') as f:
             f.write(text)
     except FileNotFoundError:
+        print("Save Error")
         saved = False
     finally:
         return saved
@@ -57,6 +59,7 @@ def read_json(path_to_data: str) -> Optional[Dict[str, str]]:
         with open(path_to_data, 'r', encoding='utf-8') as json_file:
             data = json.load(json_file)
     except FileNotFoundError:
+        print("Error: File not found")
         data = None
     finally:
         return data
@@ -78,6 +81,7 @@ def save_json(path_to_save: str, data: Dict[str, str]) -> bool:
         with open(path_to_save, 'w', encoding='utf-8') as json_file:
             json.dump(data, json_file, ensure_ascii=False)
     except FileNotFoundError:
+        print("Save Error")
         saved = False
     finally:
         return saved
