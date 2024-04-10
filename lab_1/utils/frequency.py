@@ -31,6 +31,10 @@ def frequency(input_file: str, output_file: str) -> None:
     
 
 def main() -> None:
+    """
+    Uses argparse to process command-line arguments
+    and calls the frequency() function to to calculate the frequency analysis.
+    """
     parser = argparse.ArgumentParser(description = frequency.__doc__)
     parser.add_argument("input_file", type = str, help = "Input file name")
     parser.add_argument("output_file", type = str, help = "Output file name")

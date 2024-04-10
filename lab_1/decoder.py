@@ -13,6 +13,11 @@ from utils.constants import ALPHABET
 def decode(input_file: str, output_file: str, key_json_file: str) -> None:
     """
     Decoding text from input file with given key
+
+    Args:
+    input_file: path to text to decode
+    output_file: path to decoded text
+    key_json_file: path to key
     """
     key = read_json(key_json_file)
     s = read_txt(input_file)
