@@ -36,6 +36,8 @@ def encode(input_file: str, output_file: str, key_json_file: str, shift: int) ->
     for i in s:
         res += encoded_dict.get(i, i)
 
+    res = '"' + res + '"'
+
     save_txt(output_file, res)
     save_json(key_json_file, encoded_dict)
 
