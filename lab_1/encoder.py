@@ -55,7 +55,7 @@ def main() -> None:
 
     args = parser.parse_args()
 
-    encode(args.input_file, args.output_file, args.output_json_file, args.shift)
+    encode(args.input_file, args.output_file, args.key_json_file, args.shift)
 
 
 if __name__ == "__main__":
