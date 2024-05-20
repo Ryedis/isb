@@ -56,15 +56,16 @@ def same_consecutive_bits_test(sequence: str) -> float:
     """
     seq_len = len(sequence)
 
-    proportion_of_units = sum(list(map(lambda x: 1 if x == '1' else 0, sequence))) / seq_len
+    proportion_of_units = sum(
+        list(map(lambda x: 1 if x == '1' else 0, sequence))) / seq_len
 
     if abs(proportion_of_units - 1 / 2) < 2 / math.sqrt(seq_len):
         v = 0
         for i in range(seq_len - 1):
             v += 0 if sequence[i] == sequence[i + 1] else 1
         p_value = math.erfc((abs(v - 2 * seq_len * proportion_of_units * (1 - proportion_of_units))) /
-                      (2 * math.sqrt(2 * seq_len) * proportion_of_units * (1 - proportion_of_units)))
-        
+                            (2 * math.sqrt(2 * seq_len) * proportion_of_units * (1 - proportion_of_units)))
+
         return p_value
     else:
         return 0
