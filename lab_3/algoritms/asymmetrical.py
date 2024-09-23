@@ -4,7 +4,7 @@ from cryptography.hazmat.primitives import hashes
 from cryptography.hazmat.primitives.asymmetric import padding
 from cryptography.hazmat.primitives.asymmetric import rsa
 
-from algoritms.files import Io
+from algoritms.in_out_functions import Io
 
 
 logger = logging.getLogger()

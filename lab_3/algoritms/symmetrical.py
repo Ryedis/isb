@@ -5,7 +5,7 @@ from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
 from cryptography.hazmat.backends import default_backend
 from cryptography.hazmat.primitives import padding
 
-from algoritms.files import Io
+from algoritms.in_out_functions import Io
 
 logger = logging.getLogger()
 logger.setLevel("INFO")
